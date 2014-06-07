@@ -1,5 +1,4 @@
 // PayrollProgramPart2.java
-// IT 215 Week 3 Assignment
 // Copyright (C) 2014 Kyle Maune
 
 
