@@ -19,12 +19,12 @@ public class PayrollProgramPart2
 			double sum;
 			boolean end = false;
 
+		System.out.println("Welcome to the Payroll Program!\n");
+
 		while (end == false)
 		{
 			hourlyRate = -1;
 			hoursWorked = -1;
-
-			System.out.println("Welcome to the Payroll Program!\n");
 
 			System.out.println("Enter Name of Employee(enter 'stop' to exit program): ");
 				employeeName = input.nextLine();
