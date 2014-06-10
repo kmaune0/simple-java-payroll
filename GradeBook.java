@@ -48,6 +48,59 @@ public class GradeBook {
       grade = input.nextInt(); // read grade
       total += grade;  // add grade to total
       ++gradeCounter;  // increment number of grades
+
+      // call method to increment appropriate counter
+      incrementLetterGradeCounter(grade);
     }
+  }
+
+  // add 1 to appropriate counter for specified grade
+  private void incrementLetterGradeCounter(int grade) {
+    // determines which grade was entered
+    switch (grade / 10) {
+      case 9:  // grade was inbetween 90
+      case 10:  // and 100, inclusive
+        ++aCount;
+        break;
+
+      case 8:
+        ++bCount;
+        break;
+
+      case 7:
+        ++cCount;
+        break;
+
+      case 6:
+        ++dCount;
+        break;
+
+      default:
+        ++fCount;
+        break;
+    } // end switch
+  }
+
+  // display a report based on the grades entered by the user
+  public void displayGradeReport() {
+    System.out.println("\nGrade Report:");
+
+    if (gradeCounter != 0) {
+      // average of grades
+      double average = (double) total / gradeCounter;
+
+      // summary of results
+      System.out.printf("Total of the %d grades entered is %d\n", gradeCounter, total);
+      System.out.printf("Class aver is %.2f\n", average);
+      System.out.printf("%s\n%s%d\n%s%d\n%s%d\n%s%d\n%s%d\n",
+        "Number of student who received each grade:",
+        "A:", aCount,
+        "B:", bCount,
+        "C:", cCount,
+        "D:", dCount,
+        "F:", fCount);
+    }
+    else
+      System.out.println("No grades were entered.");
   }
 }
