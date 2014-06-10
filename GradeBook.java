@@ -18,7 +18,7 @@ public class GradeBook {
     courseName = name;  // initializes courseName
   }
 
-  // method to se the course name
+  // method to set the course name
   public void setCourseName(String name) {
     courseName = name;  // store the course name
   }
